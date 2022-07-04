@@ -1,0 +1,33 @@
+[package]
+name = "quad-fileopen"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.android]
+min_sdk_version = 26
+
+[[package.metadata.android.permission]]
+name = "android.permission.BLUETOOTH"
+max_sdk_version = 30
+
+[[package.metadata.android.permission]]
+name = "android.permission.BLUETOOTH_ADMIN"
+
+[[package.metadata.android.permission]]
+name = "android.permission.ACCESS_FINE_LOCATION"
+
+[[package.metadata.android.permission]]
+name = "android.permission.BLUETOOTH_SCAN"
+
+[[package.metadata.android.permission]]
+name = "android.permission.BLUETOOTH_CONNECT"
+
+[dependencies]
+miniquad = "0.3"
+once_cell = "1.12"
+
+[dev-dependencies]
+macroquad = "0.3"
+
+[patch.crates-io]
+miniquad = { path = '../miniquad' }
